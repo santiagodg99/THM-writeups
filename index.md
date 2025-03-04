@@ -4,5 +4,5 @@ Bienvenido a mi colección de writeups.
 
 ## Índice  
 
-+ [Ice](THM-writeups/Ice/IceWriteUp.md)
++ [Ice](https://github.com/santiagodg99/THM-writeups/blob/main/Ice/IceWriteUp.md)
 
