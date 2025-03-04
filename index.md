@@ -4,5 +4,5 @@ Bienvenido a mi colección de writeups.
 
 ## Índice  
 
-+ [Ice](Ice/IceWriteUp.html)
++ [Ice](/Ice/IceWriteUp.html)
 
