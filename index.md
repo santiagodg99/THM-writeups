@@ -4,5 +4,4 @@ Bienvenido a mi colección de writeups.
 
 ## Índice  
 
-- [Ice](./Ice/IceWriteUp.md)  
-  
+- [Ice](THM-writeups/Ice/IceWriteUp.md)
