@@ -6,7 +6,7 @@ Conectarse a la VPN y listo.
 ### (a) ¿En qué puerto está Microsoft Remote Desktop (MSRDP)?
 En primer lugar realizamos un **ping** a la dirección IP que nos dan y luego hacemos **nmap**. Al hacer esto veremos que el puerto de Microsoft Remote Desktop es el **3389**.
 
-![MSRDP](THM-writeups/Ice/Microsoft_Remote_Desktop.png)
+![MSRDP](Ice/Microsoft_Remote_Desktop.png)
 
 **ANSWER:** 3389
 
