@@ -12,7 +12,7 @@ En primer lugar realizamos un **ping** a la dirección IP que nos dan y luego ha
 ### (b) ¿Qué servicio está levantado en el puerto 8000?
 Si bajamos un poco veremos que en el puerto **8000** se está ejecutando el servicio **Icecast**.
 
-![Puerto_8000](/THM-writeups/Ice/Recon/Servicio_Puerto_8000.png)
+![Puerto_8000](/Ice/Recon/Servicio_Puerto_8000.png)
 
 **ANSWER:** Icecast
 
