@@ -7,7 +7,6 @@ Conectarse a la VPN y listo.
 En primer lugar realizamos un **ping** a la dirección IP que nos dan y luego hacemos **nmap**. Al hacer esto veremos que el puerto de Microsoft Remote Desktop es el **3389**.
 
 ![MSRDP](Ice/Microsoft_Remote_Desktop.png)
-
 **ANSWER:** 3389
 
 ### (b) ¿Qué servicio está levantado en el puerto 8000?
