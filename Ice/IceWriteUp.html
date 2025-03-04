@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THM Ice Writeup</title>
+</head>
+<body>
+    <h1>THM Ice Writeup</h1>
+    
+    <h2>Task 1: Connect</h2>
+    <p>Conectarse a la VPN y listo.</p>
+
+    <h2>Task 2: Recon</h2>
+    <h3>(a) ¿En qué puerto está Microsoft Remote Desktop (MSRDP)?</h3>
+    <p>El puerto de Microsoft Remote Desktop es el <strong>3389</strong>.</p>
+    <img src="/Ice/Microsoft_Remote_Desktop.png" alt="MSRDP">
+    <p><strong>ANSWER:</strong> 3389</p>
+
+    <h3>(b) ¿Qué servicio está levantado en el puerto 8000?</h3>
+    <p>El servicio en el puerto <strong>8000</strong> es <strong>Icecast</strong>.</p>
+    <img src="/Ice/Recon/Servicio_Puerto_8000.png" alt="Servicio en puerto 8000">
+    <p><strong>ANSWER:</strong> Icecast</p>
+
+    <h3>(c) ¿Cuál es el nombre de la máquina?</h3>
+    <img src="THM-writeups/Ice/Recon/Hostname.png" alt="Hostname">
+    <p><strong>ANSWER:</strong> DARK-PC</p>
+
+    <h2>Task 3: Gain Access</h2>
+    <h3>(a) ¿Cuál es el SCORE de la vulnerabilidad de IceCast?</h3>
+    <p>El SCORE de la vulnerabilidad <strong>CVE-2004-1561</strong> es <strong>6.4</strong>.</p>
+    <img src="THM-writeups/Ice/GainAccess/Icecast_SCORE.png" alt="Icecast SCORE">
+    <p><strong>ANSWER:</strong> 6.4</p>
+
+    <h3>(b) ¿Cuál es su número de CVE?</h3>
+    <p><strong>ANSWER:</strong> CVE-2004-1561</p>
+
+    <h3>(d) ¿Cuál es la ruta completa del exploit de Icecast?</h3>
+    <p><strong>ANSWER:</strong> exploit/windows/http/icecast_header</p>
+
+    <h3>(f) ¿Cuál es el único setting requerido que está en blanco?</h3>
+    <p><strong>ANSWER:</strong> rhosts</p>
+
+    <h2>Task 4: Escalate</h2>
+    <h3>(a) ¿Cuál es la shell a la que hemos obtenido acceso?</h3>
+    <p><strong>ANSWER:</strong> meterpreter</p>
+
+    <h3>(b) ¿Qué usuario está ejecutando el proceso de Icecast?</h3>
+    <p><strong>ANSWER:</strong> DARK</p>
+
+    <h3>(c) ¿Cuál es el build de Windows?</h3>
+    <p><strong>ANSWER:</strong> 7601</p>
+
+    <h3>(d) ¿Cuál es la arquitectura del proceso?</h3>
+    <p><strong>ANSWER:</strong> x64</p>
+
+    <h3>(f) ¿Cuál es la ruta completa del primer exploit que aparece?</h3>
+    <p><strong>ANSWER:</strong> exploit/windows/local/bypassuac_eventvwr</p>
+
+    <h3>(j) Nombre de la opción establecida incorrectamente</h3>
+    <p><strong>ANSWER:</strong> LHOST</p>
+
+    <h2>Task 5: Looting</h2>
+    <h3>(b) ¿Cuál es el nombre del "printer spool service"?</h3>
+    <p><strong>ANSWER:</strong> spoolsv.exe</p>
+
+    <h3>(d) ¿Cuál es nuestro usuario ahora mismo?</h3>
+    <p><strong>ANSWER:</strong> NT AUTHORITY\SYSTEM</p>
+
+    <h3>(g) ¿Cuál es la opción que nos permite recuperar todas las credenciales?</h3>
+    <p><strong>ANSWER:</strong> creds_all</p>
+
+    <h3>(h) Ejecuta este comando y averigua la contraseña de Dark</h3>
+    <p><strong>ANSWER:</strong> Password01!</p>
+
+    <h2>Task 6: Post-Exploitation</h2>
+    <h3>(b) ¿Qué comando nos permite volcar todos los hashes de contraseñas?</h3>
+    <p><strong>ANSWER:</strong> hashdump</p>
+
+    <h3>(c) ¿Qué comando nos permite ver el remote user's desktop en tiempo real?</h3>
+    <p><strong>ANSWER:</strong> screenshare</p>
+
+    <h3>(d) ¿Qué comando nos permite grabar desde un micrófono del sistema?</h3>
+    <p><strong>ANSWER:</strong> record_mic</p>
+
+    <h3>(e) ¿Qué comando nos permite modificar los timestamps de los archivos?</h3>
+    <p><strong>ANSWER:</strong> timestomp</p>
+
+    <h3>(f) ¿Qué comando nos permite autenticarnos como cualquier usuario?</h3>
+    <p><strong>ANSWER:</strong> golden_ticket_create</p>
+
+    <h3>(g) Habilitar la opción para acceder a la máquina de forma remota</h3>
+    <p>Usamos el comando:</p>
+    <pre><code>run post/windows/manage/enable_rdp</code></pre>
+</body>
+</html>
