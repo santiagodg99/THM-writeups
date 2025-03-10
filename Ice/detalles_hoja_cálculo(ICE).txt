@@ -1,5 +1,0 @@
-User: YES
-
-Root: YES
-
-Write-up (Link): 
