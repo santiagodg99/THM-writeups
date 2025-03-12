@@ -1,3 +1,5 @@
+# TECHSUPP0RT1
+
 ## root.txt
 Empezamos obteniendo la **IP de THM**, haciéndole **ping** y después **nmap**. Encontramos varios puertos abiertos: **22 (SSH)**, **80 (HTTP)**, **139 y 445 (Samba)**
 ![](./root/ping_nmap.png)
