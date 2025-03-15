@@ -1,3 +1,5 @@
+## RETRO
+
 ### (a) ¿Cuál es el directorio oculto en el que se encuentra el web server?
 Esta máquina no responde a **ping**, así que haremos **nmap** directamente.
 ![](./hidden_directory/nmap.png)
