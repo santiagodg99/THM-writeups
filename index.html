@@ -7,20 +7,28 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
             text-align: center;
             padding: 20px;
         }
         .container {
-            background: white;
+            background: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             display: inline-block;
             max-width: 500px;
+            backdrop-filter: blur(5px);
         }
-        h1 {
-            color: #333;
+        h1, h2 {
+            color: #fff;
+        }
+        .section-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 15px;
+            text-transform: uppercase;
         }
         ul {
             list-style: none;
@@ -28,14 +36,24 @@
         }
         li {
             margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: transform 0.2s, background 0.3s;
+        }
+        .windows { background: rgba(0, 123, 255, 0.2); }
+        .linux { background: rgba(40, 167, 69, 0.2); }
+        li:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.3);
         }
         a {
             text-decoration: none;
-            color: #007BFF;
+            color: #fff;
             font-weight: bold;
+            display: block;
         }
         a:hover {
-            color: #0056b3;
+            color: #ddd;
         }
     </style>
 </head>
@@ -45,18 +63,24 @@
         <p>Bienvenido a mi colección de writeups.</p>
         
         <h2>Índice</h2>
+        
+        <p class="section-title">Máquinas Windows</p>
         <ul>
-            <li><a href="Ice/IceWriteUp.html">Ice</a></li>
-            <li><a href="Anthem/AnthemWriteUp.html">Anthem</a></li>
-            <li><a href="TechSupp0rt1/TechSupp0rt1WriteUp.html">TechSupp0rt1</a></li>
-            <li><a href="DailyBugle/DailyBugleWriteUp.html">DailyBugle</a></li>
-            <li><a href="Blue/BlueWriteUp.html">Blue</a></li>
-            <li><a href="Library/LibraryWriteUp.html">Library</a></li>
-            <li><a href="Retro/RetroWriteUp.html">Retro</a></li>
-            <li><a href="Relevant/RelevantWriteUp.html">Relevant</a></li>
-            <li><a href="Blaster/BlasterWriteUp.html">Blaster</a></li>
-            <li><a href="Bolt/BoltWriteUp.html">Bolt</a></li>
-            <li><a href="PickleRick/PickleRickWriteUp.html">PickleRick</a></li>
+            <li class="windows"><a href="Anthem/AnthemWriteUp.html">Anthem</a></li>
+            <li class="windows"><a href="Blaster/BlasterWriteUp.html">Blaster</a></li>
+            <li class="windows"><a href="Blue/BlueWriteUp.html">Blue</a></li>
+            <li class="windows"><a href="DailyBugle/DailyBugleWriteUp.html">DailyBugle</a></li>
+            <li class="windows"><a href="Ice/IceWriteUp.html">Ice</a></li>
+            <li class="windows"><a href="Library/LibraryWriteUp.html">Library</a></li>
+            <li class="windows"><a href="Relevant/RelevantWriteUp.html">Relevant</a></li>
+            <li class="windows"><a href="Retro/RetroWriteUp.html">Retro</a></li>
+            <li class="windows"><a href="TechSupp0rt1/TechSupp0rt1WriteUp.html">TechSupp0rt1</a></li>
+        </ul>
+        
+        <p class="section-title">Máquinas Linux</p>
+        <ul>
+            <li class="linux"><a href="Bolt/BoltWriteUp.html">Bolt</a></li>
+            <li class="linux"><a href="PickleRick/PickleRickWriteUp.html">PickleRick</a></li>
         </ul>
     </div>
 </body>
